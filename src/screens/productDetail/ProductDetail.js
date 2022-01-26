@@ -12,7 +12,7 @@ const ProductDetail = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Text>Product Detail</Text>
+        <Text>Detalle producto</Text>
        
       </View>
     </SafeAreaView>

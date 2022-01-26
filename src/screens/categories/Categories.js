@@ -11,8 +11,8 @@ import {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.container}>
-          <Text>Categories</Text>
-          <Button title="Go to Products" onPress={() => navigation.navigate('Products')} />
+          <Text>Categorías</Text>
+          <Button title="Ir a productos" onPress={() => navigation.navigate('Productos')} />
         </View>
       </SafeAreaView>
     );
