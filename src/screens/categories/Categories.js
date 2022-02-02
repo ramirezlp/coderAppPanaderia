@@ -7,7 +7,7 @@ import {
   } from 'react-native';
  
   import styles from './styles';
-  import CategoryItem from '../categoriesItem/CategoryItem.js';
+  import CategoryItem from '../../components/categoriesItem/CategoryItem';
   import { CATEGORIES } from '../../utils/data/categories.js';
   
   const Categories = ({navigation}) => {

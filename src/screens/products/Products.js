@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import { BREADS } from '../../utils/data/breads';
-import ProductItem from '../productsItem/ProductItem';
+import ProductItem from '../../components/productsItem/ProductItem';
 import styles from './styles';
 
 const Products = ({navigation, route}) => {
