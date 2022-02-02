@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   name: {
-        fontFamily: 'OpenSans-Bold',
         fontSize: 20,
   },
     details: {

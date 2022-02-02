@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
     flex: 1
   },
   date: {
-        fontFamily: 'OpenSans-Bold',
         fontSize: 20,
   },
     details: {

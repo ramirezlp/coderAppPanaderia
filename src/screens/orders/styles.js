@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     },
     footer: {
         padding: 12,
-        bottomTopColor: "#ccc",
         borderTopWidth: 1,
     },
     confirm: {
@@ -25,7 +24,6 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 18,
-        fontFamily: 'OpenSans-Bold',
         color: "#212121",
     }
 });
