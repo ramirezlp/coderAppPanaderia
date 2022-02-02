@@ -8,12 +8,16 @@ import {
 
 import styles from './styles';
 
-const ProductDetail = ({navigation}) => {
+const ProductDetail = ({navigation, route}) => {
+  const { product } = route.params
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Text>Detalle producto</Text>
-       
+         <Text>{product.name}</Text>
+         <Text>{product.description}</Text>
+         <Text>{product.weight}</Text>
+         <Text>$ {product.price}</Text>
       </View>
     </SafeAreaView>
   );
