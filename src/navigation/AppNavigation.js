@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ShopStackNavigation from './shop/Shop';
-import CartStackNavigation from './cart/Cart';
+import ShopStackNavigation from './shop/ShopStackNavigation';
+import CartStackNavigation from './cart/CartStackNavigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const BottomTabs = createBottomTabNavigator();
