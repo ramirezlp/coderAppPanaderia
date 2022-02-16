@@ -3,18 +3,23 @@
 import React from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import styles from "./styles";
-import { CART } from "../../utils/data/cart";
 import CartItem from "../../components/cartItem/CartItem";
-const Cart = () => {
-    const items = CART;
-    const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+import { useSelector, useDispatch } from "react-redux";
+import { removeItem, confirmCart } from "../../store/actions/cart.action";
+
+const Cart = ({navigation}) => {
+    const dispatch = useDispatch();
+    const items = useSelector(state => state.cart.items);
+    const total = useSelector(state => state.cart.total);
 
     const handleConfirm = () => {
-        console.warn("Confirmar compra");
+        dispatch(confirmCart(items, total));
+        navigation.navigate("Orders");
     }
 
     const handleDelete = (id) => {
-        console.warn("Eliminar item", id);
+        dispatch(removeItem(id));
     }
 
     const renderItems = (data) => (

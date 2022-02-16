@@ -12,7 +12,6 @@
  import store from './src/store/index';
  
  const App = () => {
-   console.warn({store})
    return (
      <Provider store={store}>
       <AppNavigation />

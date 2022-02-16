@@ -1,0 +1,1 @@
+export const URL_API = 'https://appshop-f64da-default-rtdb.firebaseio.com/'; 
