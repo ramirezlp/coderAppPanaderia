@@ -4,20 +4,20 @@ import React, { useEffect } from 'react';
    FlatList,
    View,
  } from 'react-native';
-import { BREADS } from '../../utils/data/breads';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterBreads, selectBread } from '../../store/actions/breads.action';
+import { filterProducts, selectProduct, setProducts } from '../../store/actions/products.action';
 import ProductItem from '../../components/productsItem/ProductItem'; 
 import styles from './styles';
  
  const Products = ({navigation, route}) => {
   
   const dispatch = useDispatch();
-  const categoryBreads = useSelector(state => state.breads.filteredBread)
+
+  const categoryProducts = useSelector(state => state.products.filteredProducts)
   const category = useSelector(state => state.categories.selected);
   
   const handleSelectedProduct = (item) => {
-    dispatch(selectBread(item.id));
+    dispatch(selectProduct(item.id));
     navigation.navigate('ProductDetail', 
       {
         name: item.name,
@@ -32,14 +32,14 @@ import styles from './styles';
   }
 
   useEffect(() => {
-    dispatch(filterBreads(category.id));
+    dispatch(filterProducts(category.id));
   }, [])
 
    return (
     <SafeAreaView style={styles.container}>
     <View style={styles.container}>
       <FlatList
-         data={categoryBreads}
+         data={categoryProducts}
          renderItem={renderProducts}
          keyExtractor={item => item.id}
        />

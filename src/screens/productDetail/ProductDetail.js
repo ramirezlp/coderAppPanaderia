@@ -12,16 +12,15 @@ import styles from './styles';
 
 const ProductDetail = ({navigation, route}) => {
   const dispatch = useDispatch();
-  const bread = useSelector(state => state.breads.selected);
-  const handleAddItemCart = () => dispatch(addItem(bread));
+  const product = useSelector(state => state.products.selected);
+  const handleAddItemCart = () => dispatch(addItem(product));
+  console.warn(product);
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Text>{bread.name}</Text>
-        <Text>{bread.description}</Text>
-        <Text>{bread.weight}</Text>
-        <Text>$ {bread.price}</Text>
-        <Button title="Agregar al carrito" onPress={() => handleAddItemCart()} />
+        <Text>{product.name}</Text>
+        <Text>$ {product.price}</Text>
+        <Button title="Agregar a la venta" onPress={() => handleAddItemCart()} />
       </View>
     </SafeAreaView>
   );

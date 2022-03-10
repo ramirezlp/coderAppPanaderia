@@ -8,25 +8,25 @@ const BottomTabs = createBottomTabNavigator();
 
 const BottomTabsNavigator = () => {
     return (
-        <BottomTabs.Navigator initialRouteName='Shop' screenOptions={{
+        <BottomTabs.Navigator initialRouteName='Productos' screenOptions={{
             headerShown: false,
         }}>
             <BottomTabs.Screen
-                name='Shop'
+                name='Productos'
                 component={ShopStackNavigation} 
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <Ionicons name='home-outline' size={20} />
+                        <Ionicons name='clipboard-outline' size={20} />
                     )          
                 }}
 
             />
             <BottomTabs.Screen
-                name='Cart'
+                name='Venta'
                 component={CartStackNavigation}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <Ionicons name='cart-outline' size={20} />
+                        <Ionicons name='logo-usd' size={20} />
                     )
                 }} 
                 />

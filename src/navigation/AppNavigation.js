@@ -1,14 +1,17 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import BottomTabsNavigator from './bottom-tab/BottomTabsNavigation';
-import AuthNavigator from './auth/AuthNavigation';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setProducts } from '../store/actions/products.action'
 
 const AppNavigation = () => {
-    const isAuth = useSelector(state => state.auth.userId);
+    const dispatch = useDispatch();
+    dispatch(setProducts());
+    //useSelector(state => console.log(state))
+
     return (
         <NavigationContainer >
-        {isAuth ? <BottomTabsNavigator /> : <AuthNavigator />}
+            <BottomTabsNavigator />
         </NavigationContainer>);
 }
 

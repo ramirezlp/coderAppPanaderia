@@ -1,7 +1,7 @@
 
    
 import React from "react";
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, FlatList, TouchableOpacity, Button } from "react-native";
 import styles from "./styles";
 import CartItem from "../../components/cartItem/CartItem";
 
@@ -42,6 +42,9 @@ const Cart = ({navigation}) => {
                         <Text style={styles.text}>${total}</Text>
                     </View>
                 </TouchableOpacity>
+                <Button title="Ver Ventas" style={
+                    {marginTop: 5}
+                } onPress={() => navigation.navigate("Orders")} />
             </View>
         </View>
     )

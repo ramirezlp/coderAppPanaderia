@@ -2,7 +2,8 @@ import React from 'react';
 import {
   SafeAreaView,
   View,
-  FlatList
+  FlatList,
+  Button
 } from 'react-native';
 import CategoryItem from '../../components/categoriesItem/CategoryItem';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,7 +13,7 @@ import styles from './styles';
 const Categories = ({navigation}) => {
   
   const categories = useSelector(state => {
-    console.log(state) 
+    //console.log(state) 
 
     return state.categories.categories}
     );
@@ -28,6 +29,10 @@ const Categories = ({navigation}) => {
    );
  }
 
+ const handleNewProduct = () => {
+    navigation.navigate("Nuevo Producto");
+ }
+
  const renderCategories = ({item}) => {
    return (
      <CategoryItem item={item} onSelected={handleSelectedCategory} />
@@ -36,6 +41,7 @@ const Categories = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Button onPress={handleNewProduct} title="Nuevo Producto +"></Button>
       <View style={styles.container}>
         <FlatList
            data={categories}
